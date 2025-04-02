@@ -58,17 +58,4 @@ boxes_gdf = gpd.GeoDataFrame(points_gdf[['region_id']], geometry=points_gdf['pat
 # Export GeoDataFrame to GPKG
 boxes_gdf.to_file(r'C:\Users\X\Documents\uCalgary\DeepLearningGroup_2025\data\training\random_boxes.gpkg', driver="GPKG")
 
-# now, I want to read in my orthos
-
-# Define folder path
-ortho_folder = r"C:\Users\X\Documents\uCalgary\DeepLearningGroup_2025\data\orthos"
-
-# List all .tif files
-ortho_files = [os.path.join(ortho_folder, f) for f in os.listdir(ortho_folder) if f.lower().endswith('.tif')]
-
-# Print the list to verify
-print(f"Found {len(ortho_files)} orthos:")
-for f in ortho_files:
-    print(f)
-
-
+#############################
